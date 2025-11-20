@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Chemsi</title>
+    <title>Chemsi - Tienda de Mascotas</title>
 
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts/index.js" defer></script>
 </head>
 
 <body>
@@ -16,17 +15,49 @@
         <h1 class="logo">Chemsi 🐾</h1>
         <nav class="nav">
             <a href="index.html">Inicio</a>
-            <a href="productos.html" class="active">Productos</a>
+            <a href="productos.html">Productos</a>
             <a href="contacto.html">Contacto</a>
         </nav>
     </header>
 
-    <section class="productos">
-        <h2>Todos los productos</h2>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Bienvenido a Chemsi</h2>
+            <p>Encuentra lo mejor para tus mascotas, con envíos a todo el país.</p>
+            <a href="#productos" class="btn-hero">Comprar ahora</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1598136490944-bc3a0f4d4f07?q=80&w=1200" class="hero-img" alt="Mascotas felices">
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="categorias">
+        <h2>Categorías</h2>
+
+        <div class="cat-grid">
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1558944351-c7e33ecb4500?q=80&w=800" alt="Perros">
+                <h3>Perros</h3>
+            </div>
+
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=800" alt="Gatos">
+                <h3>Gatos</h3>
+            </div>
+
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800" alt="Accesorios">
+                <h3>Accesorios</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="productos" id="productos">
+        <h2>Productos destacados</h2>
 
         <div class="grid">
-
-            <!-- 1 -->
+            <!-- Producto 1 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1619983081593-8d40f39a42f7?q=80&w=600" alt="Juguete para perro">
                 <h3>Juguete interactivo para perro</h3>
@@ -34,7 +65,7 @@
                 <button class="btn">Agregar al carrito</button>
             </div>
 
-            <!-- 2 -->
+            <!-- Producto 2 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1596495578065-8a4166cc0bb9?q=80&w=600" alt="Comida para gato">
                 <h3>Comida premium para gato</h3>
@@ -42,75 +73,49 @@
                 <button class="btn">Agregar al carrito</button>
             </div>
 
-            <!-- 3 -->
+            <!-- Producto 3 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1601758124519-8e35f7fdddbb?q=80&w=600" alt="Cama para mascota">
+                <img src="https://images.unsplash.com/photo-1601758124519-8e35f7fdddbb?q=80&w=600" alt="Cama para perro">
                 <h3>Cama acolchada para mascota</h3>
                 <p class="precio">$55.000</p>
                 <button class="btn">Agregar al carrito</button>
             </div>
 
-            <!-- 4 -->
+            <!-- Producto 4 (imagen corregida) -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1596854307942-8ad9a290e1f2?q=80&w=600" alt="Arena para gato">
                 <h3>Arena para gato 10kg</h3>
                 <p class="precio">$30.000</p>
                 <button class="btn">Agregar al carrito</button>
             </div>
-
-            <!-- 5 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8?q=80&w=600" alt="Correa para perro">
-                <h3>Correa ajustable para perro</h3>
-                <p class="precio">$18.000</p>
-                <button class="btn">Agregar al carrito</button>
-            </div>
-
-            <!-- 6 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1610018556061-d3121aa4c3d3?q=80&w=600" alt="Snack para perro">
-                <h3>Snacks saludables para perro</h3>
-                <p class="precio">$15.000</p>
-                <button class="btn">Agregar al carrito</button>
-            </div>
-
-            <!-- 7 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?q=80&w=600" alt="Plato para mascota">
-                <h3>Plato doble antideslizante</h3>
-                <p class="precio">$22.000</p>
-                <button class="btn">Agregar al carrito</button>
-            </div>
-
-            <!-- 8 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=600" alt="Transportadora">
-                <h3>Transportadora para mascota</h3>
-                <p class="precio">$95.000</p>
-                <button class="btn">Agregar al carrito</button>
-            </div>
-
-            <!-- 9 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1589578527966-422ce5fdf2a1?q=80&w=600" alt="Rascador para gato">
-                <h3>Rascador para gato</h3>
-                <p class="precio">$70.000</p>
-                <button class="btn">Agregar al carrito</button>
-            </div>
-
-            <!-- 10 -->
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1596496051591-05f5e7db5d99?q=80&w=600" alt="Shampoo para perro">
-                <h3>Shampoo hipoalergénico</h3>
-                <p class="precio">$20.000</p>
-                <button class="btn">Agregar al carrito</button>
-            </div>
-
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <p>Chemsi - Tienda de Mascotas © 2025</p>
     </footer>
 
+    <!-- CARRITO FLOTANTE -->
+    <div class="carrito-btn" onclick="toggleCarrito()">
+        🛒 <span id="carrito-count">0</span>
+    </div>
 
+    <!-- MODAL DEL CARRITO -->
+    <div id="carrito-modal" class="carrito-modal">
+        <div class="carrito-contenido">
+            <h2>Tu carrito</h2>
+            <button class="cerrar" onclick="toggleCarrito()">✖</button>
+
+            <div id="carrito-items"></div>
+
+            <h3 class="total">Total: $<span id="carrito-total">0</span></h3>
+
+            <button class="btn-comprar">Finalizar compra</button>
+        </div>
+    </div>
+
+    <script src="scripts/carrito.js"></script>
+
+</body>
+</html>
