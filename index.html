@@ -6,7 +6,6 @@
     <title>Chemsi - Tienda de Mascotas</title>
 
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts/index.js" defer></script>
 </head>
 
 <body>
@@ -14,11 +13,16 @@
     <!-- HEADER -->
     <header class="header">
         <h1 class="logo">Chemsi 🐾</h1>
+
         <nav class="nav">
             <a href="index.html">Inicio</a>
             <a href="productos.html">Productos</a>
             <a href="contacto.html">Contacto</a>
         </nav>
+
+        <div class="cart-icon" id="cartBtn">
+            🛒 <span id="cart-count">0</span>
+        </div>
     </header>
 
     <!-- HERO -->
@@ -26,8 +30,9 @@
         <div class="hero-text">
             <h2>Bienvenido a Chemsi</h2>
             <p>Encuentra lo mejor para tus mascotas, con envíos a todo el país.</p>
-            <a href="#productos" class="btn-hero">Comprar ahora</a>
+            <a href="#productos" class="btn">Comprar ahora</a>
         </div>
+
         <img src="https://images.unsplash.com/photo-1598136490944-bc3a0f4d4f07?q=80&w=1200" class="hero-img" alt="Mascotas felices">
     </section>
 
@@ -58,50 +63,54 @@
         <h2>Productos destacados</h2>
 
         <div class="grid">
-            <!-- Producto 1 -->
+
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1619983081593-8d40f39a42f7?q=80&w=600" alt="Juguete para perro">
                 <h3>Juguete interactivo para perro</h3>
-                <p class="precio">$25.000</p>
-                <button class="btn">Agregar al carrito</button>
+                <p class="precio">$25000</p>
+                <button class="btn add-cart-btn">Agregar al carrito</button>
             </div>
 
-            <!-- Producto 2 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1596495578065-8a4166cc0bb9?q=80&w=600" alt="Comida para gato">
                 <h3>Comida premium para gato</h3>
-                <p class="precio">$40.000</p>
-                <button class="btn">Agregar al carrito</button>
+                <p class="precio">$40000</p>
+                <button class="btn add-cart-btn">Agregar al carrito</button>
             </div>
 
-            <!-- Producto 3 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1601758124519-8e35f7fdddbb?q=80&w=600" alt="Cama para perro">
                 <h3>Cama acolchada para mascota</h3>
-                <p class="precio">$55.000</p>
-                <button class="btn">Agregar al carrito</button>
+                <p class="precio">$55000</p>
+                <button class="btn add-cart-btn">Agregar al carrito</button>
             </div>
 
-            <!-- Producto 4 -->
             <div class="card">
                 <img src="https://share.google/images/vO32aMjL6Hr9Zgfd2">
                 <h3>Arena para gato 10kg</h3>
-                <p class="precio">$30.000</p>
-                <button class="btn">Agregar al carrito</button>
+                <p class="precio">$30000</p>
+                <button class="btn add-cart-btn">Agregar al carrito</button>
             </div>
+
         </div>
     </section>
 
+    <!-- PANEL DEL CARRITO -->
+    <div class="cart-panel" id="cartPanel">
+        <h3>Carrito de compras</h3>
+
+        <div id="cart-items"></div>
+
+        <p class="total">Total: $<span id="cart-total">0</span></p>
+
+        <button id="closeCart" class="btn">Cerrar</button>
+    </div>
+
     <!-- FOOTER -->
     <footer class="footer">
-        <p>Chemsi - Tienda de Mascotas © 2025</p>
-       
+        Chemsi - Tienda de Mascotas © 2025
     </footer>
 
+    <script src="index.js"></script>
 </body>
 </html>
-
-
-
-
-
