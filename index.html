@@ -1,56 +1,102 @@
-<!DOCTYPE html>
+b<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemsi - Tienda de Mascotas</title>
 
-   
     <link rel="stylesheet" href="styles.css">
-
-   
     <script src="scripts/index.js" defer></script>
 </head>
+
 <body>
 
+    <!-- HEADER -->
     <header class="header">
         <h1 class="logo">Chemsi 🐾</h1>
-
         <nav class="nav">
             <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
             <a href="contacto.html">Contacto</a>
         </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
-        <h2>Bienvenido a Chemsi</h2>
-        <p>Todo para tu mascota en un solo lugar.</p>
+        <div class="hero-text">
+            <h2>Bienvenido a Chemsi</h2>
+            <p>Encuentra lo mejor para tus mascotas, con envíos a todo el país.</p>
+            <a href="#productos" class="btn-hero">Comprar ahora</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1598136490944-bc3a0f4d4f07?q=80&w=1200" class="hero-img" alt="Mascotas felices">
     </section>
 
-    <section class="productos">
+    <!-- CATEGORÍAS -->
+    <section class="categorias">
+        <h2>Categorías</h2>
+
+        <div class="cat-grid">
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1558944351-c7e33ecb4500?q=80&w=800" alt="Perros">
+                <h3>Perros</h3>
+            </div>
+
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=800" alt="Gatos">
+                <h3>Gatos</h3>
+            </div>
+
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800" alt="Accesorios">
+                <h3>Accesorios</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="productos" id="productos">
         <h2>Productos destacados</h2>
 
         <div class="grid">
+            <!-- Producto 1 -->
             <div class="card">
-                <img src="https://via.placeholder.com/200" alt="Juguete para perro">
-                <h3>Juguete para perro</h3>
-                <p>$25.000</p>
+                <img src="https://images.unsplash.com/photo-1619983081593-8d40f39a42f7?q=80&w=600" alt="Juguete para perro">
+                <h3>Juguete interactivo para perro</h3>
+                <p class="precio">$25.000</p>
                 <button class="btn">Agregar al carrito</button>
             </div>
 
+            <!-- Producto 2 -->
             <div class="card">
-                <img src="https://via.placeholder.com/200" alt="Comida para gato">
-                <h3>Comida para gato</h3>
-                <p>$40.000</p>
+                <img src="https://images.unsplash.com/photo-1596495578065-8a4166cc0bb9?q=80&w=600" alt="Comida para gato">
+                <h3>Comida premium para gato</h3>
+                <p class="precio">$40.000</p>
+                <button class="btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1601758124519-8e35f7fdddbb?q=80&w=600" alt="Cama para perro">
+                <h3>Cama acolchada para mascota</h3>
+                <p class="precio">$55.000</p>
+                <button class="btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1596854307942-8ad9a290e1f2?q=80&w=600" alt="Arena para gato">
+                <h3>Arena para gato 10kg</h3>
+                <p class="precio">$30.000</p>
                 <button class="btn">Agregar al carrito</button>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <p>Chemsi - Tienda de Mascotas © 2025</p>
+       
     </footer>
 
 </body>
-
 </html>
