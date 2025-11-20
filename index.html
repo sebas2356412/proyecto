@@ -1,58 +1,107 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemsi - Tienda de Mascotas</title>
+    <title>Carrito simple</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .producto { border: 1px solid #ccc; padding: 15px; width: 200px; margin-bottom: 10px; }
+        .btn { background: #ff914d; color: white; border: none; padding: 8px; cursor: pointer; }
+        #carrito { margin-top: 30px; border-top: 2px solid #000; padding-top: 20px; }
+        .fin { background: green; color: white; padding: 10px; margin-top: 20px; display: inline-block; }
+    </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <h1 class="logo">Chemsi 🐾</h1>
+    <h1>Carrito con algoritmo 🛒</h1>
 
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-
-        <div class="cart-icon" id="cartBtn">
-            🛒 <span id="cart-count">0</span>
-        </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Bienvenido a Chemsi</h2>
-            <p>Encuentra lo mejor para tus mascotas, con envíos a todo el país.</p>
-            <a href="productos.html" class="btn">Comprar ahora</a>
-        </div>
-
-        <img src="https://images.unsplash.com/photo-1598136490944-bc3a0f4d4f07?q=80&w=1200" class="hero-img" alt="Mascotas felices">
-    </section>
-
-    <!-- PANEL DEL CARRITO -->
-    <div class="cart-panel" id="cartPanel">
-        <h3>Carrito de compras</h3>
-
-        <div id="cart-items"></div>
-
-        <p class="total">Total: $<span id="cart-total">0</span></p>
-
-        <button id="closeCart" class="btn">Cerrar</button>
+    <!-- PRODUCTOS -->
+    <div class="producto">
+        <h3>Juguete para perro</h3>
+        <p>Precio: $25000</p>
+        <button class="btn comprar-btn">Comprar</button>
     </div>
 
+    <div class="producto">
+        <h3>Comida para gato</h3>
+        <p>Precio: $40000</p>
+        <button class="btn comprar-btn">Comprar</button>
+    </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        Chemsi - Tienda de Mascotas © 2025
-    </footer>
+    <div class="producto">
+        <h3>Cama para mascota</h3>
+        <p>Precio: $55000</p>
+        <button class="btn comprar-btn">Comprar</button>
+    </div>
 
-    <script src="index.js"></script>
+    <!-- CARRITO -->
+    <div id="carrito">
+        <h2>Carrito de compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p><strong>Total: $<span id="total">0</span></strong></p>
+        <button id="finalizar" class="btn">Finalizar compra</button>
+        <p id="mensaje-final"></p>
+    </div>
+
+<script>
+    // --------------------------
+    // ALGORITMO DEL CARRITO
+    // --------------------------
+
+    let carrito = [];
+    let total = 0;
+
+    const botonesComprar = document.querySelectorAll(".comprar-btn");
+    const listaCarrito = document.getElementById("lista-carrito");
+    const totalTexto = document.getElementById("total");
+    const mensajeFinal = document.getElementById("mensaje-final");
+
+    botonesComprar.forEach(boton => {
+        boton.addEventListener("click", (e) => {
+            const contenedor = e.target.parentElement;
+            const nombre = contenedor.querySelector("h3").textContent;
+            const precio = parseInt(contenedor.querySelector("p").textContent.replace("Precio: $", ""));
+
+            // Agregar al carrito (ALGORITMO)
+            carrito.push({ nombre, precio });
+
+            total += precio;
+
+            actualizarCarrito();
+        });
+    });
+
+    function actualizarCarrito() {
+        listaCarrito.innerHTML = "";
+        carrito.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.nombre} - $${item.precio}`;
+            listaCarrito.appendChild(li);
+        });
+
+        totalTexto.textContent = total;
+    }
+
+    document.getElementById("finalizar").addEventListener("click", () => {
+        if (carrito.length === 0) {
+            mensajeFinal.textContent = "El carrito está vacío.";
+            mensajeFinal.style.color = "red";
+            return;
+        }
+
+        // MENSAJE DE COMPRA FINALIZADA
+        mensajeFinal.textContent = "¡Compra finalizada con éxito! 🎉";
+        mensajeFinal.style.color = "green";
+
+        // Vaciar carrito
+        carrito = [];
+        total = 0;
+        actualizarCarrito();
+    });
+</script>
+
 </body>
 </html>
