@@ -5,39 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Chemsi</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-
-    <!-- JS -->
-    <script src="../scripts/index.js" defer></script>
 </head>
+
 <body>
 
-    <header class="header">
-        <h1 class="logo">Chemsi 🐾</h1>
+<header class="header">
+    <h1 class="logo">Chemsi 🐾</h1>
 
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
+    <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
 
-    <section class="contacto">
-        <h2>Contacto</h2>
-        <p>¿Tienes dudas o recomendaciones? Escríbenos:</p>
+    <div class="cart-icon" id="cartBtn">
+        🛒 <span id="cart-count">0</span>
+    </div>
+</header>
 
-        <form class="form">
-            <input type="text" placeholder="Tu nombre" required>
-            <input type="email" placeholder="Tu correo" required>
-            <textarea placeholder="Escribe tu mensaje..." required></textarea>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
-    </section>
+<section class="contacto">
+    <h2>Contáctanos</h2>
 
-    <footer class="footer">
-        <p>Chemsi - Tienda de Mascotas © 2025</p>
-    </footer>
+    <form class="formulario">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea placeholder="Mensaje" required></textarea>
+        <button class="btn">Enviar mensaje</button>
+    </form>
+</section>
 
+<!-- PANEL DEL CARRITO -->
+<div class="cart-panel" id="cartPanel">
+    <h3>Carrito de compras</h3>
+    <div id="cart-items"></div>
+    <p class="total">Total: $<span id="cart-total">0</span></p>
+    <button id="closeCart" class="btn">Cerrar</button>
+</div>
+
+<footer class="footer">
+    Chemsi © 2025
+</footer>
+
+<script src="index.js"></script>
 </body>
-
 </html>
+
