@@ -4,7 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemsi - Tienda de Mascotas</title>
+div class="carrito-btn" onclick="toggleCarrito()">
+        🛒 <span id="carrito-count">0</span>
+    </div>
 
+    <div id="carrito-modal" class="carrito-modal">
+        <div class="carrito-contenido">
+            <h2>Tu carrito</h2>
+            <button class="cerrar" onclick="toggleCarrito()">✖</button>
+
+            <div id="carrito-items"></div>
+
+            <h3 class="total">Total: $<span id="carrito-total">0</span></h3>
+
+            <button class="btn-comprar">Finalizar compra</button>
+        </div>
+    </div>
+
+    <script src="scripts/carrito.js"></script>
+
+</body>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts/index.js" defer></script>
 </head>
@@ -100,5 +119,6 @@
 
 </body>
 </html>
+
 
 
